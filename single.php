@@ -28,9 +28,9 @@ get_header('banner'); ?>
 							<div class="kratos-post-meta text-center">
 								<span>
 								<i class="fa fa-calendar"></i> <?php echo get_the_date(); ?>
-				                <i class="fa fa-commenting-o"></i> <?php comments_number('0', '1', '%'); ?>条评论
-				                <i class="fa fa-eye"></i> <?php echo kratos_get_post_views();?>次阅读
-				                <i class="fa fa-thumbs-o-up"></i> <?php if( get_post_meta($post->ID,'love',true) ){ echo get_post_meta($post->ID,'love',true); } else { echo '0'; }?>人点赞
+				                <i class="fa fa-commenting-o"></i> <?php comments_number('0', '1', '%'); ?>條評論
+				                <i class="fa fa-eye"></i> <?php echo kratos_get_post_views();?>次閱讀
+				                <i class="fa fa-heart"></i> <?php if( get_post_meta($post->ID,'love',true) ){ echo get_post_meta($post->ID,'love',true); } else { echo '0'; }?>人喜歡
 								</span>
 							</div>
 						</header>
@@ -46,9 +46,9 @@ get_header('banner'); ?>
 						<footer class="kratos-entry-footer clearfix">
 							<div class="post-like-donate text-center clearfix" id="post-like-donate">
 							<?php if ( kratos_option( 'post_like_donate' ) ) { ?>
-				   			<a href="<?php echo kratos_option('donate_links'); ?>" class="Donate"><i class="fa fa-bitcoin"></i> 打赏</a>
+				   			<a href="<?php echo kratos_option('donate_links'); ?>" class="Donate"><i class="fa fa-bitcoin"></i> 打賞</a>
 							<?php } ?>
-				   			<a href="javascript:;" id="btn" data-action="love" data-id="<?php the_ID(); ?>" class="Love <?php if(isset($_COOKIE['love_'.$post->ID])) echo 'done';?>" ><i class="fa fa-thumbs-o-up"></i> 点赞</a>
+				   			<a href="javascript:;" id="btn" data-action="love" data-id="<?php the_ID(); ?>" class="Love <?php if(isset($_COOKIE['love_'.$post->ID])) echo 'done';?>" ><i class="fa fa-heart"></i> 喜歡</a>
 							<?php if ( kratos_option( 'post_share', true ) ) { ?>
 							<a href="javascript:;"  class="Share" ><i class="fa fa-share-alt"></i> 分享</a>
 								<?php require_once( get_template_directory() . '/inc/share.php'); ?>
@@ -64,8 +64,8 @@ get_header('banner'); ?>
 					</div>
 					<?php if ( kratos_option( 'post_cc', true ) ) { ?>
 					<div class="kratos-hentry kratos-copyright text-center clearfix">
-						<img alt="知识共享许可协议" src="<?php echo get_template_directory_uri(); ?>/images/licenses.png">
-						<h5>本作品采用 <a rel="license nofollow" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+						<img alt="知識共享許可協議" src="<?php echo get_template_directory_uri(); ?>/images/licenses.png">
+						<h5>本作品採用 <a rel="license nofollow" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">知識共享署名-相同方式共享 4.0 國際許可協議</a> 進行許可</h5>
 					</div>
 					<?php } ?>
 					<nav class="navigation post-navigation clearfix" role="navigation">
